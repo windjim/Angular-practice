@@ -5,5 +5,5 @@
 
 <div>
     雙向綁定: {{name2}}
-    <input type="text"  [(ngModel)]="name2" />
+    <input type="text"  [(ngModel)]="name2" (ngModelChange)="onInput2()"/>
 </div>

@@ -9,6 +9,7 @@ export class TwowayChildrenComponent implements OnInit {
   @Input() name: string = '';
   @Input() name2: string = '';
   @Output() emitName = new EventEmitter<string>();
+  @Output() emitName2 = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
@@ -16,5 +17,8 @@ export class TwowayChildrenComponent implements OnInit {
   onInput(val: Event) {
     const inputValue = val.target as HTMLInputElement;
     this.emitName.emit(inputValue.value);
+  }
+  onInput2() {
+    console.log(123)
   }
 }
