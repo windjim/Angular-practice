@@ -1,0 +1,17 @@
+<p>test2 works!</p>
+
+<div>
+  <ng-content select="header"></ng-content>
+</div>
+
+<div>
+  <ng-content select=".footerTest"></ng-content>
+</div>
+
+<div>
+  <ng-content select="[question]"></ng-content>
+</div>
+
+<div>
+  <ng-content select=":not(header) :not(.footerTest) :not([question])"></ng-content>
+</div>

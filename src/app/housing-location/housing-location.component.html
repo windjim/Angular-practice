@@ -1,0 +1,14 @@
+<section class="listing" >
+    <img [src]="housingLocation.photo" alt="house-photo" class="listing-photo">
+    <h2 class="listing-heading">{{housingLocation.name}}</h2>
+    <p class="listing-location">{{housingLocation.city}}, {{housingLocation.state}}</p>
+    <a routerLink="/details/{{housingLocation.id}}"> more... </a>
+</section>
+
+<!-- 把外層整個list傳進來 -->
+<!-- <p>works</p>
+<section class="listing" *ngFor="let item of housingLocationList">
+    <img [src]="item.photo" alt="house-photo" class="listing-photo">
+    <h2 class="listing-heading">{{item.name}}</h2>
+    <p class="listing-location">{{item.city}}, {{item.state}}</p>
+</section> -->

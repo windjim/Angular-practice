@@ -1,0 +1,6 @@
+<p>外層: {{name}}</p>
+<app-twoway-children 
+    [name]="name" 
+  
+    (emitName)="receiveName($event)"></app-twoway-children>
+<p>外層: {{name2}}</p>

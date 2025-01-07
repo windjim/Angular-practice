@@ -1,0 +1,12 @@
+<p>pipes works!</p>
+<p>The hero's birthday is {{ 1 | minGoYear : '25' :'22' :'111' }}</p>
+
+<p>The hero's birthday is {{ birthday | date:"MM/dd/yyyy" }} </p>
+
+<p>The chained hero's birthday is
+  {{ birthday | date | uppercase}}
+  </p>
+<p>The chained hero's birthday is
+  {{ birthday | date:'fullDate' | uppercase}}</p>
+
+

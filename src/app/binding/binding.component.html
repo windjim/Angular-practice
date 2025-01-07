@@ -1,0 +1,36 @@
+<p>binding works!</p>
+<!-- style 搭配與其相對應值-->
+<nav [style.background-color]="backgroundColor">
+  <p>練習樣式綁定</p>
+</nav>
+
+<!-- 事件綁定 -->
+<!-- <h4>myClick is an event on the custom ClickDirective:</h4>
+<button type="button" (myClick)="clickMessage=$event" >click with myClick</button>
+{{clickMessage}} -->
+
+<!-- 鍵盤事件 -->
+<input (keydown.w.e)="onKeydown($event)"  (keyup.w)="onKeyup($event)"/>
+
+
+<!-- 雙向綁定 -->
+<div>
+  <label for="name">Name: </label>
+  <input type="text" id="name" [(ngModel)]="twoWayBinding">
+</div>
+<p>Your name is: {{ twoWayBinding }}</p>
+
+<!-- <div>
+  <button type="button" (click)="dec()" title="smaller">-</button>
+  <button type="button" (click)="inc()" title="bigger">+</button>
+  <span [style.font-size.px]="size">FontSize: {{size}}px</span>
+</div> -->
+
+<section>
+  <button type="button" [attr.aria-label]="testName">{{testName}}</button>
+  <a href="#" aria-label="設置"><i class="icon-gear"></i> 設置</a>
+</section>
+
+{{test}}
+<button type="button" (click)="test = false">否</button>
+<button type="button" (click)="test = true">是</button>
