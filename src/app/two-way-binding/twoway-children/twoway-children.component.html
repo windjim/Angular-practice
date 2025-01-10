@@ -3,7 +3,16 @@
     <input type="text"  (input)="onInput($event)"/>
 </div>
 
-<div>
-    雙向綁定: {{name2}}
+<div style="background-color:bisque">
+    父子雙向綁定: {{name2}}
     <input type="text"  [(ngModel)]="name2" (ngModelChange)="onInput2()"/>
 </div>
+
+<!-- <div style="background-color: aquamarine;">
+    元件內雙向綁定(沒有用語法糖): {{name3}}
+    <input type="text" [ngModel]="name3" (ngModelChange)="name3 = $event"/>
+</div> -->
+<!-- <div>
+    元件內雙向綁定: {{name3}}
+    <input [(ngModel)]="name3" placeholder="輸入文字">
+</div> -->
