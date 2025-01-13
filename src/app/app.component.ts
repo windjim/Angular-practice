@@ -38,6 +38,9 @@ import { Component } from '@angular/core';
         <li>
           <a [routerLink]="[ '/twoWay']">twoWay</a>
         </li>
+        <li>
+          <a [routerLink]="[ '/directive']">directive</a>
+        </li>
       </ul>
 
       <router-outlet></router-outlet>

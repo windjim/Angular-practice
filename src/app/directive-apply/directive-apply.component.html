@@ -1,0 +1,38 @@
+<div>
+    <h2>結構式指令</h2>
+    <p *appDirectiveTest="condition" class="unless a">
+        (A) This paragraph is displayed because the condition is false.
+    </p>
+    <ng-template [appDirectiveTest] = "!condition">
+        <p  class="unless b">
+            (B) Although the condition is true,
+            this paragraph is displayed because appUnless is set to false.
+        </p>
+    </ng-template>
+    
+    <button
+        (click)="condition = !condition"
+        [ngClass] = "{ 'a': condition, 'b': !condition }" >
+        Toggle condition to {{condition ? 'false' : 'true'}}
+    </button>
+</div>
+<div>
+    <h2>屬性式指令</h2>
+    <div>
+        <h3>滑鼠事件</h3>
+        <p appAttriDirective style="width: 10%;">Highlight me!</p>
+    </div>
+    <div >
+        <h3>傳值</h3>
+        <div>
+            <input type="radio" name="colors" (click)="color='lightgreen'">Light Green
+            <input type="radio" name="colors" (click)="color='yellow'">Yellow
+            <input type="radio" name="colors" (click)="color='cyan'">Cyan
+        </div>
+        <p  [appAttriDirective]="color" style="width: 10%;">Highlighted in orange </p>
+    </div>
+    <div>
+        <h3>NgNonBindable</h3>
+        <p ngNonBindable>{{1+1}}</p>
+    </div>
+</div>

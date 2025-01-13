@@ -33,7 +33,10 @@ import { MatAccordionComponent } from './mat-accordion/mat-accordion.component';
 import { TestCpComponent } from './testNew/test-cp/test-cp.component';
 import { MatTableComponent } from './mat-table/mat-table.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
-import { TwowayChildrenComponent } from './two-way-binding/twoway-children/twoway-children.component'
+import { TwowayChildrenComponent } from './two-way-binding/twoway-children/twoway-children.component';
+import { DirectiveTestDirective } from './directive-test.directive';
+import { DirectiveApplyComponent } from './directive-apply/directive-apply.component';
+import { AttriDirectiveDirective } from './attri-directive.directive'
 
 
 
@@ -59,6 +62,9 @@ import { TwowayChildrenComponent } from './two-way-binding/twoway-children/twowa
     MatTableComponent,
     TwoWayBindingComponent,
     TwowayChildrenComponent,
+    DirectiveTestDirective,
+    DirectiveApplyComponent,
+    AttriDirectiveDirective,
   ],
   imports: [
     BrowserModule,

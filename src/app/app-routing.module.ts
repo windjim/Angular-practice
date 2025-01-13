@@ -15,6 +15,7 @@ import { AugustPracticeComponent } from './august-practice/august-practice.compo
 import { MatAccordionComponent } from './mat-accordion/mat-accordion.component';
 import { MatTableComponent } from './mat-table/mat-table.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { DirectiveApplyComponent } from './directive-apply/directive-apply.component';
 
 // 也可以設為變數
 const homeRoute:Route = {
@@ -75,6 +76,10 @@ const routes: Routes = [
   {
     path: 'twoWay',
     component:  TwoWayBindingComponent
+  },
+  {
+    path: 'directive',
+    component:  DirectiveApplyComponent
   },
   //萬用模組放最後
   // {
