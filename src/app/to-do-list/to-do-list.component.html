@@ -1,0 +1,57 @@
+<section class="todoapp">
+
+    <header class="header">
+        <h1>todos</h1>
+        <input class="new-todo" placeholder="What needs to be done?" autofocus (keyup.enter)="addTodo($event)">
+    </header>
+    <section class="main">
+        <ul class="todo-list">
+            <li *ngFor="let todo of getTodoList(); let i = index" [class.completed]="todo.getStatus"
+                [class.editing]="todo.getEditMode">
+                <div class="view">
+                    <input class="toggle" type="checkbox" (click)="todo.toggleCompletion()" [checked]="todo.getStatus">
+                    <label (dblclick)="edit(todo)">{{ todo.getTitle }}</label>
+                    <button class="destroy" (click)="remove(todo.getId)"></button>
+                </div>
+
+                <input *ngIf="todo.getEditMode" #editedtodo class="edit" [value]="todo.getTitle"
+                    (blur)="cancelUpdate(todo)" (keyup.enter)="update(todo, editedtodo.value)"
+                    (keyup.escape)="cancelUpdate(todo)">
+            </li>
+        </ul>
+        <!-- {{todoList|json}} -->
+    </section>
+
+    <footer class="footer">
+        <span class="todo-count">
+            <strong>還有{{ unCompleted.length }}個未完成</strong>
+        </span>
+
+        <ul class="filters" *ngIf="getTodoList().length">
+            <li>
+                <a href="#"
+                    (click)="setStatus(todoStatusType.All); $event.preventDefault()">
+                    All
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    (click)="setStatus(todoStatusType.Finished); $event.preventDefault()">
+                    Finished
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    (click)="setStatus(todoStatusType.Unfinished); $event.preventDefault()">
+                    Unfinished
+                </a>
+            </li>
+        </ul>
+        <button
+            *ngIf="completed.length"
+            class="clear-completed"
+            (click)="clearCompleted()">
+            Clear Finished
+        </button>
+    </footer>
+</section>

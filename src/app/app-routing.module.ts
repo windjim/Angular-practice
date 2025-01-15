@@ -16,6 +16,8 @@ import { MatAccordionComponent } from './mat-accordion/mat-accordion.component';
 import { MatTableComponent } from './mat-table/mat-table.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { DirectiveApplyComponent } from './directive-apply/directive-apply.component';
+import { MessageBoardComponent } from './message-board/message-board.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 // 也可以設為變數
 const homeRoute:Route = {
@@ -80,6 +82,14 @@ const routes: Routes = [
   {
     path: 'directive',
     component:  DirectiveApplyComponent
+  },
+  {
+    path: 'message',
+    component:  MessageBoardComponent
+  },
+  {
+    path: 'to-do-list',
+    component:  ToDoListComponent
   },
   //萬用模組放最後
   // {

@@ -1,0 +1,14 @@
+<form>
+    <h3>名稱: <input type="text"  name="name" [(ngModel)]="name"></h3>
+    <h3>內容: <input type="text"  name="content" [(ngModel)]="content"></h3>
+</form>
+
+<button type="button" (click)="addMessage()">新增留言</button>
+<section>
+    <h3>留言列表</h3>
+    <ul *ngFor="let item of messageList; let i = index">
+        <li>留言人: {{item.name}}</li>
+        <li>訊息內容: {{item.content}}</li>
+        <li>時間: {{item.date | date:'y MMM d, h:mm a'}}</li>
+    </ul>
+</section>

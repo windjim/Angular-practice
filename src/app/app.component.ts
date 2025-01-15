@@ -41,6 +41,12 @@ import { Component } from '@angular/core';
         <li>
           <a [routerLink]="[ '/directive']">directive</a>
         </li>
+        <li>
+          <a [routerLink]="[ '/message']">Message-board</a>
+        </li>
+        <li>
+          <a [routerLink]="[ '/to-do-list']">To-do-list</a>
+        </li>
       </ul>
 
       <router-outlet></router-outlet>

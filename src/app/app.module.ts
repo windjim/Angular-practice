@@ -36,7 +36,9 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { TwowayChildrenComponent } from './two-way-binding/twoway-children/twoway-children.component';
 import { DirectiveTestDirective } from './directive-test.directive';
 import { DirectiveApplyComponent } from './directive-apply/directive-apply.component';
-import { AttriDirectiveDirective } from './attri-directive.directive'
+import { AttriDirectiveDirective } from './attri-directive.directive';
+import { MessageBoardComponent } from './message-board/message-board.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component'
 
 
 
@@ -65,6 +67,8 @@ import { AttriDirectiveDirective } from './attri-directive.directive'
     DirectiveTestDirective,
     DirectiveApplyComponent,
     AttriDirectiveDirective,
+    MessageBoardComponent,
+    ToDoListComponent,
   ],
   imports: [
     BrowserModule,
