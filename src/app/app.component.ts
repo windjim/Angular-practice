@@ -47,6 +47,9 @@ import { Component } from '@angular/core';
         <li>
           <a [routerLink]="[ '/to-do-list']">To-do-list</a>
         </li>
+        <li>
+          <a [routerLink]="[ '/ab-service']">ab-service</a>
+        </li>
       </ul>
 
       <router-outlet></router-outlet>

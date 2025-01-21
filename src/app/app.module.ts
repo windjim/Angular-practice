@@ -39,6 +39,9 @@ import { DirectiveApplyComponent } from './directive-apply/directive-apply.compo
 import { AttriDirectiveDirective } from './attri-directive.directive';
 import { MessageBoardComponent } from './message-board/message-board.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component'
+import { ServiceinABComponent } from './servicein-ab/servicein-ab.component';
+import { ServiceinAbModule } from './servicein-ab/servicein-ab.module';
+import { TestBModule } from './test-b/test-b.module';
 
 
 
@@ -69,6 +72,7 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component'
     AttriDirectiveDirective,
     MessageBoardComponent,
     ToDoListComponent,
+    ServiceinABComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,7 +83,9 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component'
     AppRoutingModule,
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ServiceinAbModule,
+    TestBModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,6 +18,7 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { DirectiveApplyComponent } from './directive-apply/directive-apply.component';
 import { MessageBoardComponent } from './message-board/message-board.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
+import { ServiceinABComponent } from './servicein-ab/servicein-ab.component';
 
 // 也可以設為變數
 const homeRoute:Route = {
@@ -90,6 +91,10 @@ const routes: Routes = [
   {
     path: 'to-do-list',
     component:  ToDoListComponent
+  },
+  {
+    path: 'ab-service',
+    component:  ServiceinABComponent
   },
   //萬用模組放最後
   // {

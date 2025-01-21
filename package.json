@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 63671",
-    "build": "ng build",
+    "build": "ng build --output-path=dist --base-href=https://windjim.github.io/Angular-practice/",
+    "deploy": "npm run build && npx angular-cli-ghpages --dir=dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

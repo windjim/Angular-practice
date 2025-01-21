@@ -21,7 +21,7 @@ export class ToDoListComponent implements OnInit {
   3. 分離關注點：將業務邏輯放在組件中而不是模板中，可以更好地遵循分離關注點的原則，使得代碼更清晰。
   */
   todoStatusType = TodoStatusType;
-   status = TodoStatusType.All;
+  status = TodoStatusType.All;
 
   // 設定顯示狀態
   setStatus(num: number) {
