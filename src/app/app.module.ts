@@ -42,6 +42,7 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component'
 import { ServiceinABComponent } from './servicein-ab/servicein-ab.component';
 import { ServiceinAbModule } from './servicein-ab/servicein-ab.module';
 import { TestBModule } from './test-b/test-b.module';
+import { RouterTestComponent } from './router-test/router-test.component';
 
 
 
@@ -73,6 +74,7 @@ import { TestBModule } from './test-b/test-b.module';
     MessageBoardComponent,
     ToDoListComponent,
     ServiceinABComponent,
+    RouterTestComponent,
   ],
   imports: [
     BrowserModule,

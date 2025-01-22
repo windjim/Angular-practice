@@ -1,11 +1,11 @@
 <p>test-routes works!</p>
-<hr>
+<hr />
 <ul>
-  <li><a  [routerLink]="[ '/testRoutes/test1']">Test1</a></li>
-  <li><a  [routerLink]="[ '/testRoutes/test2']">Test2</a></li>
-  <li><a  [routerLink]="[ '/testRoutes/test3']">Test3</a></li>
+  <li><a [routerLink]="['/testRoutes/test1']">Test1</a></li>
+  <li><a [routerLink]="['/testRoutes/test2']">Test2</a></li>
+  <li><a [routerLink]="['/testRoutes/test3']">Test3</a></li>
 </ul>
-<button type="button" [disabled]="isUnchanged">Disabled Button</button>
+<!-- <button type="button" [disabled]="isUnchanged">Disabled Button</button>
 <button type="button" (click)="isUnchanged = !isUnchanged">切換</button>
 <p [ngClass]="classes">[ngClass] binding to the classes property making this blue</p>
 
@@ -30,5 +30,5 @@
       Is content projection cool?
     </div>
   </app-test2>
-</section>
+</section> -->
 <router-outlet></router-outlet>
