@@ -85,7 +85,6 @@ import { TestBModule } from './test-b/test-b.module';
     ReactiveFormsModule,
     FormsModule,
     ServiceinAbModule,
-    TestBModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
