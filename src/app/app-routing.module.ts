@@ -20,6 +20,8 @@ import { MessageBoardComponent } from './message-board/message-board.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { ServiceinABComponent } from './servicein-ab/servicein-ab.component';
 import { RouterTestComponent } from './router-test/router-test.component';
+import { RouterTest1Component } from './router-test/router-test1/router-test1.component';
+import { RouterTest2Component } from './router-test/router-test2/router-test2.component';
 
 // 也可以設為變數
 const homeRoute: Route = {
@@ -27,9 +29,9 @@ const homeRoute: Route = {
   component: HomeComponent,
 };
 const routes: Routes = [
-  // {
-  //   path: '', redirectTo: '/home', pathMatch: 'full'
-  // },
+  {
+    path: '', redirectTo: '/pipes', pathMatch: 'full'
+  },
   homeRoute,
   {
     path: 'details/:id',
@@ -105,12 +107,31 @@ const routes: Routes = [
   {
     path: 'router-test',
     component: RouterTestComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'router-test1',
+        pathMatch: 'full',
+      },
+      {
+        path: 'router-test1',
+        component: RouterTest1Component,
+      },
+      {
+        path: 'router-test2',
+        component: RouterTest2Component,
+      },
+    ],
+  },
+  {
+    path: 'feature',
+    loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule),
   },
   //萬用模組放最後
-  // {
-  //   path:'**',
-  //   component: HomeComponent
-  // }
+  {
+    path:'**',
+    component: RouterTestComponent
+  }
 ];
 
 @NgModule({

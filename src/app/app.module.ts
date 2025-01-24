@@ -43,6 +43,9 @@ import { ServiceinABComponent } from './servicein-ab/servicein-ab.component';
 import { ServiceinAbModule } from './servicein-ab/servicein-ab.module';
 import { TestBModule } from './test-b/test-b.module';
 import { RouterTestComponent } from './router-test/router-test.component';
+import { RouterTest1Component } from './router-test/router-test1/router-test1.component';
+import { RouterTest2Component } from './router-test/router-test2/router-test2.component';
+import { FeatureRoutingModule } from './feature/feature-routing.module';
 
 
 
@@ -75,6 +78,8 @@ import { RouterTestComponent } from './router-test/router-test.component';
     ToDoListComponent,
     ServiceinABComponent,
     RouterTestComponent,
+    RouterTest1Component,
+    RouterTest2Component,
   ],
   imports: [
     BrowserModule,
@@ -82,11 +87,12 @@ import { RouterTestComponent } from './router-test/router-test.component';
     MaterialModule,
     MatIconModule,
     HttpClientModule,
-    AppRoutingModule,
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
     ServiceinAbModule,
+    // FeatureRoutingModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

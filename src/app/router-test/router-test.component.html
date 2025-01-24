@@ -1,3 +1,14 @@
-<button routerLink="/ab-service" style="border: 1px solid lightseagreen">
+<button routerLink="/router-test/router-test1" style="border: 1px solid lightseagreen">
   登入
 </button>
+
+<ul>
+  <li>
+    <a [routerLink]="['/router-test/router-test1']">router-test1</a>
+  </li>
+  <li>
+    <a [routerLink]="['/router-test/router-test2']">router-test2</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

@@ -12,10 +12,8 @@ import { Component } from '@angular/core';
       />
     </header>
     <section class="content">
-      <!-- <app-home></app-home> -->
-      <!-- <my-app></my-app> -->
       <ul>
-        <li>
+        <!-- <li>
           <a [routerLink]="['/home']">Home</a>
         </li>
         <li>
@@ -47,15 +45,18 @@ import { Component } from '@angular/core';
         </li>
         <li>
           <a [routerLink]="['/message']">Message-board</a>
-        </li>
+        </li> -->
         <li>
           <a [routerLink]="['/to-do-list']">To-do-list</a>
         </li>
-        <li>
+        <!-- <li>
           <a [routerLink]="['/ab-service']">ab-service</a>
-        </li>
+        </li> -->
+        <!-- <li>
+          <a [routerLink]="['/router-test']" routerLinkActive="active">router-test</a>
+        </li> -->
         <li>
-          <a [routerLink]="['/router-test']">router-test</a>
+          <a [routerLink]="['/feature']" routerLinkActive="active">feature</a>
         </li>
       </ul>
 
