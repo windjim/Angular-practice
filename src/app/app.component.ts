@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
     </header>
     <section class="content">
       <ul>
-        <!-- <li>
+        <li>
           <a [routerLink]="['/home']">Home</a>
         </li>
         <li>
@@ -45,18 +45,21 @@ import { Component } from '@angular/core';
         </li>
         <li>
           <a [routerLink]="['/message']">Message-board</a>
-        </li> -->
+        </li>
         <li>
-          <a [routerLink]="['/to-do-list']">To-do-list</a>
+          <a [routerLink]="['/to-do-list']" routerLinkActive="active">To-do-list</a>
         </li>
         <!-- <li>
           <a [routerLink]="['/ab-service']">ab-service</a>
         </li> -->
-        <!-- <li>
-          <a [routerLink]="['/router-test']" routerLinkActive="active">router-test</a>
-        </li> -->
         <li>
-          <a [routerLink]="['/feature']" routerLinkActive="active">feature</a>
+          <a [routerLink]="['/router-test']" routerLinkActive="active">router-test</a>
+        </li>
+        <li>
+          <button style="border: 1px solid blue" [routerLink]="['feature']" routerLinkActive="active" >feature</button>
+        </li>
+        <li>
+          <a [routerLink]="['/login']" routerLinkActive="active">登入入口</a>
         </li>
       </ul>
 

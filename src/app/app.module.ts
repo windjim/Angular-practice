@@ -45,7 +45,7 @@ import { TestBModule } from './test-b/test-b.module';
 import { RouterTestComponent } from './router-test/router-test.component';
 import { RouterTest1Component } from './router-test/router-test1/router-test1.component';
 import { RouterTest2Component } from './router-test/router-test2/router-test2.component';
-import { FeatureRoutingModule } from './feature/feature-routing.module';
+import { FeatureModulesModule } from './feature-modules/feature-modules.module';
 
 
 
@@ -91,7 +91,7 @@ import { FeatureRoutingModule } from './feature/feature-routing.module';
     ReactiveFormsModule,
     FormsModule,
     ServiceinAbModule,
-    // FeatureRoutingModule,
+    FeatureModulesModule,
     AppRoutingModule,
   ],
   providers: [],

@@ -1,3 +1,4 @@
+import { CanDeactivate, CanActivate } from '@angular/router';
 // 官方元件
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Route } from '@angular/router';
@@ -22,6 +23,8 @@ import { ServiceinABComponent } from './servicein-ab/servicein-ab.component';
 import { RouterTestComponent } from './router-test/router-test.component';
 import { RouterTest1Component } from './router-test/router-test1/router-test1.component';
 import { RouterTest2Component } from './router-test/router-test2/router-test2.component';
+import { EnsureLoginGuard } from './feature-modules/ensure-login.guard';
+import { FeatureGuard } from './feature/feature.guard';
 
 // 也可以設為變數
 const homeRoute: Route = {
@@ -126,6 +129,12 @@ const routes: Routes = [
   {
     path: 'feature',
     loadChildren: () => import('./feature/feature.module').then(m => m.FeatureModule),
+    canActivate: [FeatureGuard]
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./feature-modules/feature-modules.module').then(m => m.FeatureModulesModule),
+    
   },
   //萬用模組放最後
   {
